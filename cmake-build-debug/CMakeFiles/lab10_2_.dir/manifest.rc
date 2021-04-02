@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/chumi/CLionProjects/lab10_2_/cmake-build-debug/CMakeFiles/lab10_2_.dir/embed.manifest"
