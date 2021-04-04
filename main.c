@@ -3,18 +3,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include "func.h"
-struct personal
-{
+struct personal {
     char surname[10];
     char name[10];
-    struct DateOfBirth
-    {
+    struct DateOfBirth {
         int day;
         int month;
         int year;
     } Date;
     int marks[3];
-    struct personal * next;
+    struct personal *next;
 } ;
 
 
@@ -42,7 +40,7 @@ int main() {
     }
     ToNULL(pCurrent);
     fclose(input);
-    input=NULL;
+    input = NULL;
     Tab(pStart);
 
     pCurrent = pStart;
@@ -55,36 +53,30 @@ int main() {
 
     }
 
-    pStart=BubbleSort(pStart);
+    pStart = BubbleSort(pStart);
     printf("Sorted list of those born in autumn.\n");
     Tab(pStart);
 
-    int cont=0;
+    int cont = 0;
     printf("Enter num:");
     scanf_s("%i", &cont);
-    switch (cont)
-    {
-        case 1:
-            {
-                AddStudent(pStart, input);
-                start=BubbleSort(pStart);
-                break;
-            };
-        case 2:
-            {
-                start=DeleteStudent(pStart);
-                break;
-            };
+    switch (cont) {
+        case 1: {
+            AddStudent(pStart, input);
+            start = BubbleSort(pStart);
+            break;
+        };
+        case 2: {
+            start = DeleteStudent(pStart);
+            break;
+        };
         default:
-                return 3;
+            return 3;
     }
-    if(cont==1)
-    {
+    if (cont == 1) {
         printf("list after adding one element:\n");
         Tab(pStart);
-    }
-    else if (cont==2)
-    {
+    } else if (cont == 2) {
         printf("List after deleting elements by attribute:\n");
         Tab(pStart);
     }
